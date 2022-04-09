@@ -12,13 +12,13 @@
     <h1>日本の首都は？</h1>
     <form action="main.php" method="post">
     <input type="text" name="inputCapital">
-    <input type="submit" value="OK" name="Submit">
+    <input type="submit" value="OK" name="submit">
     </form>
     <?php 
-    
+
 $jpCapital = '東京';
 
-if(isset($_POST['Submit'])) {
+if(isset($_POST['submit'])) {
 
    $inputCapital = $_POST['inputCapital'];
 
