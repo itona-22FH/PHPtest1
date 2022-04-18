@@ -7,19 +7,18 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>日本の首都は？</h1>
         <form method="post">
-            <input type="text" name="inputCapital">
-            <input type="submit" value="OK" name="submit">
+            <input type="text" name="inputFruit">
+            <input type="submit" value="検索" name="submit">
         </form>
         <?php
-            $jpCapital = "東京";
+            $fruits = ['apple', 'orange', 'strawberry'];
             if(isset($_POST["submit"])) {
-                $inputCapital = $_POST["inputCapital"];
-                if($inputCapital === $jpCapital) {
-                    echo "正解";
+                $inputFruit = $_POST["inputFruit"];
+                if(in_array($inputFruit, $fruits)) {
+                    echo "$inputFruit は、配列fruitsの中に存在します。";
                 } else {
-                    echo "不正解";
+                    echo "$inputFruit は、配列fruitsの中に存在していません。";
                 }
             }
         ?>
