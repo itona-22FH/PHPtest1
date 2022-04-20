@@ -7,19 +7,21 @@
         <title>Document</title>
     </head>
     <body>
-        <form method="post">
-            <input type="text" name="inputFruit">
-            <input type="submit" value="検索" name="submit">
-        </form>
         <?php
-            $fruits = ['apple', 'orange', 'strawberry'];
-            if(isset($_POST["submit"])) {
-                $inputFruit = $_POST["inputFruit"];
-                if(in_array($inputFruit, $fruits)) {
-                    echo "$inputFruit は、配列fruitsの中に存在します。";
-                } else {
-                    echo "$inputFruit は、配列fruitsの中に存在していません。";
-                }
+            $question["問題"] = "日本の首都は？";
+            $answer["回答1"] = "大阪";
+            $answer["回答2"] = "北海道";
+            $answer["回答3"] = "箱根";
+            $answer["回答4"] = "東京";
+
+            foreach ($question as $questionKey => $questionValue) {
+                echo $questionKey . " " . $questionValue;
+            }
+
+            echo "<br>";
+
+            foreach ($answer as $answerKey => $answerValue) {
+                echo "<br>" . $answerKey . " " . $answerValue;
             }
         ?>
     </body>
